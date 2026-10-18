@@ -55,7 +55,7 @@
     <header class="header">
         <a href="#" class="logo">Portfolio</a>
         <nav class="navbar">
-            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#home" style="--i:1">Home</a>
             <a href="#tentang" style="--i:2">About</a>
             <a href="#pendidikan" style="--i:3">Education</a>
             <a href="#skills" style="--i:4">Skills</a>
@@ -80,6 +80,7 @@
             <div class="home-sci">
                 <a href="https://github.com/devifadillah1001" style="--i:8"><i class='bx bxl-github'></i></a>
                 <a href="https://www.instagram.com/dvfdllh_0110?igsh=MXN2eTFrbjVhYTNvZQ==" style="--i:9"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.youtube.com/@devifadillah419" target="_blank" rel="noopener noreferrer" style="--i:12" aria-label="YouTube"><i class='bx bxl-youtube'></i></a>
                 <a href="https://wa.me/message/DTP5TZT6P37UI1" style="--i:10"><i class='bx bxl-whatsapp'></i></a>
                 <a href="https://www.tiktok.com/@devifadillah5?_r=1&_t=ZS-977gkVdWmgP" style="--i:11"><i class='bx bxl-tiktok'></i></a>
             </div>
@@ -109,7 +110,8 @@
                 <p>Halo, Saya adalah Devi Fadillah, mahasiswa Program Studi Informatika di Universitas Satya Terra Bhinneka. Saya memiliki minat dalam bidang teknologi informasi, desain Grafis menggunakan Photoshop, dan pengembangan website. Saya merupakan pribadi yang disiplin, bertanggung jawab, serta memiliki semangat belajar yang tinggi. Saya senang mempelajari hal-hal baru dan terus mengembangkan kemampuan baik secara akademik maupun non-akademik. Melalui pendidikan dan berbagai pelatihan yang telah saya ikuti, saya berupaya meningkatkan keterampilan untuk mempersiapkan diri menghadapi dunia kerja profesional.</p>
             <br>
             <div class="age-simple">
-                <span class="age-number">18+</span>
+                <span class="age-number" id="ageNumber">18</span>
+                <span class="age-plus">+</span>
                 <span class="age-label">Usia</span>
             </div>
             </div>
@@ -117,34 +119,46 @@
         </div>
     </section>
 
-<!-- EDUCATION -->
+<!-- ================= EDUCATION ================= -->
 
-    <section class="education" id="pendidikan">
-        <h2 class="heading">Education</h2>
-        <div class="education-timeline">
-            <div class="education-item">
-                <div class="edu-dot"></div>
-                <div class="edu-date">2016 - 2021</div>
-                <h3>SD NEGERI 060948</h3>
-            </div>
-            <div class="education-item">
-                <div class="edu-dot"></div>
-                <div class="edu-date">2021 - 2023</div>
-                <h3>SMP NEGERI 5 MEDAN</h3>
-            </div>
-            <div class="education-item">
-                <div class="edu-dot"></div>
-                <div class="edu-date">2023 - 2025</div>
-                <h3>SMA NEGERI 9 MEDAN</h3>
-            </div>
-            <div class="education-item">
-                <div class="edu-dot"></div>
-                <div class="edu-date">2025 - Sekarang</div>
-                <h3>S1 INFORMATIKA</h3>
-                <p>UNIVERSITAS SATYA TERRA BHINNEKA</p>
-            </div>
+<section class="education" id="pendidikan">
+    <h2 class="heading">Education</h2>
+
+    <div class="education-timeline">
+
+        <!-- SD -->
+        <div class="education-item">
+            <div class="edu-dot"></div>
+            <div class="edu-date">2016 - 2021</div>
+            <h3>SD NEGERI 060948</h3>
         </div>
-    </section>
+
+        <!-- SMP -->
+        <div class="education-item">
+            <div class="edu-dot"></div>
+            <div class="edu-date">2021 - 2023</div>
+            <h3>SMP NEGERI 5 MEDAN</h3>
+        </div>
+
+        <!-- SMA -->
+        <div class="education-item">
+            <div class="edu-dot"></div>
+            <div class="edu-date">2023 - 2025</div>
+            <h3>SMA NEGERI 9 MEDAN</h3>
+        </div>
+
+        <!-- KULIAH -->
+        <div class="education-item">
+            <div class="edu-dot"></div>
+            <div class="edu-date">2025 - Sekarang</div>
+            <h3>S1 INFORMATIKA</h3>
+            <p>UNIVERSITAS SATYA TERRA BHINNEKA</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- =============== END EDUCATION =============== -->
 
 <!-- SKILLS -->
 
@@ -152,35 +166,76 @@
         <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
             <div class="skills-box">
-                <i class='bx bx-code-alt'></i>
+
+                <div class="logo-group">
+                    <img src="html.png" alt="">
+                    <img src="css.png" alt="">
+                    <img src="javascript.png" alt="">
+                </div>
+
                 <h3>Pengembangan Website</h3>
+
                 <p>HTML, CSS, JavaScript</p>
+
             </div>
             <div class="skills-box">
-                <i class='bx bx-paint'></i>
+
+                <div class="logo-group">
+                    <img src="photoshop.png" alt="">
+                </div>
+
                 <h3>Desain Grafis dan Pengelolahan Foto</h3>
+
                 <p>Adobe Photoshop CS 4</p>
+
             </div>
             <div class="skills-box">
-                <i class='bx bx-paint'></i>
+
+                <div class="logo-group">
+                    <img src="logo-ilustrator.png" alt="">
+                    <img src="corelDRAW.png" alt="">
+                </div>
+
                 <h3>Desain Grafis Berbasis Vektor</h3>
+
                 <p>Adobe Illustrator CS</p>
+
                 <p>CorelDRAW X4</p>
+
             </div>
             <div class="skills-box">
-                <i class='bx bx-paint'></i>
+
+                <div class="logo-group">
+                    <img src="indesign.png" alt="">
+                </div>
+
                 <h3>Tata Letak dan Desain Publikasi</h3>
-                <p>Adobe Indesign CS 4</p>
+
+                <p>Adobe InDesign CS 4</p>
+
             </div>
             <div class="skills-box">
-                <i class='bx bx-laptop'></i>
+
+                <div class="logo-group">
+                    <img src="visualstudiocode.jpeg" alt="">
+                </div>
+
                 <h3>Tools</h3>
+
                 <p>Visual Studio Code</p>
+
             </div>
             <div class="skills-box">
-                <i class='bx bx-globe'></i>
+
+                <div class="logo-group">
+                    <img src="inggris.png" alt="">
+                    <img src="china.jpeg" alt="">
+                </div>
+
                 <h3>Language</h3>
+
                 <p>English, Mandarin</p>
+
             </div>
         </div>
     </section>
@@ -207,7 +262,8 @@
             </div>
 
             <!-- IMAGE -->
-            <img src="lomba corel.jpg" alt="">
+            <img src="lomba corel.jpg" alt=""
+            onclick="openCertificate(this.src)">
 
             <!-- ICON -->
             <div class="insta-icons">
@@ -236,7 +292,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="seee.jpg" alt="">
+            <img src="seee.jpg" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -264,7 +321,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="ilustrator.png" alt="">
+            <img src="ilustrator.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -292,7 +350,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="Kotak.png" alt="">
+            <img src="Kotak.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -320,7 +379,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="mario.png" alt="">
+            <img src="mario.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -348,7 +408,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="mobil.png" alt="">
+            <img src="mobil.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -376,7 +437,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="Design Baju.png" alt="">
+            <img src="Design Baju.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -435,7 +497,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="sketsa orang.png" alt="">
+            <img src="sketsa orang.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -463,7 +526,8 @@
                 <i class='bx bx-dots-horizontal-rounded'></i>
             </div>
 
-            <img src="bingkai.png" alt="">
+            <img src="bingkai.png" alt=""
+            onclick="openCertificate(this.src)">
 
             <div class="insta-icons">
 
@@ -572,25 +636,6 @@
             </div>
         </div>
 
-        <!-- CARD 9 -->
-        <div class="sertifikat-box">
-            <img src="Belajar Dasar AI.jpeg" alt=""
-            onclick="openCertificate(this.src)">
-
-            <div class="sertifikat-title">
-                Belajar Dasar AI
-            </div>
-        </div>
-
-        <!-- CARD 10 -->
-        <div class="sertifikat-box">
-            <img src="Introduction to Financial Literacy.jpeg" alt=""
-            onclick="openCertificate(this.src)">
-
-            <div class="sertifikat-title">
-                Introduction to Financial Literacy
-            </div>
-        </div>
     </div>
 
 </section>
