@@ -88,25 +88,43 @@ window.onclick = function(event) {
 }
 
 // ***************************** ACTIVE LINK NAVBAR SAAT SCROLL ******************************
-let sections = document.querySelectorAll('section');
-let navLinks = document.querySelectorAll('header nav a');
+// ================= ACTIVE NAVBAR =================
 
-window.onscroll = () => {
-    sections.forEach(sec => {
-        let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
-        let height = sec.offsetHeight;
-        let id = sec.getAttribute('id');
+const navLinks = document.querySelectorAll('header nav a');
+const sections = document.querySelectorAll('section');
 
-        if(top >= offset && top < offset + height) {
-            navLinks.forEach(links => {
-                links.classList.remove('active');
-                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-            });
-        };
+function updateActiveLink() {
+    let currentId = '';
+
+    sections.forEach(section => {
+        const top = section.offsetTop - 160;
+        const bottom = top + section.offsetHeight;
+
+        if (window.scrollY >= top && window.scrollY < bottom) {
+            currentId = section.id;
+        }
     });
-};
 
+    navLinks.forEach(link => {
+        const targetId = link.getAttribute('href').slice(1);
+
+        link.classList.toggle(
+            'active',
+            targetId === currentId
+        );
+    });
+}
+
+window.addEventListener('scroll', updateActiveLink);
+window.addEventListener('load', updateActiveLink);
+
+// Jalankan juga saat menu diklik
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.forEach(item => item.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
 
 // CERTIFICATAE
 
@@ -158,4 +176,31 @@ document.getElementById('commentForm')
       alert('Gagal mengirim: ' + JSON.stringify(err));
     });
 });
+
+// ================= USIA OTOMATIS =================
+
+function updateUsia() {
+    const tanggalLahir = new Date(2008, 0, 10);
+    const sekarang = new Date();
+
+    let usia = sekarang.getFullYear() - tanggalLahir.getFullYear();
+
+    if (
+        sekarang.getMonth() < tanggalLahir.getMonth() ||
+        (
+            sekarang.getMonth() === tanggalLahir.getMonth() &&
+            sekarang.getDate() < tanggalLahir.getDate()
+        )
+    ) {
+        usia--;
+    }
+
+    const elemenUsia = document.getElementById("ageNumber");
+
+    if (elemenUsia) {
+        elemenUsia.textContent = usia;
+    }
+}
+
+updateUsia();
 
