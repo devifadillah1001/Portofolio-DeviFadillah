@@ -458,7 +458,8 @@ header {
 .navbar a {
     display: inline-block;
     font-size: 1.6rem;
-    color:var(--main-color);
+    color:var(--text-color);
+    
     font-weight: 500;
     margin-left: 2.5rem;
     transition: .3s ease;
@@ -808,50 +809,113 @@ header {
 }
 
 /* -------------------- SKILLS SECTION ------------------------ */
+/* ==================== SKILLS SECTION ==================== */
+
 .skills {
-    background:var(--bg-color);
+    background: var(--bg-color);
+    padding: 12rem 9% 8rem;
 }
 
 .skills-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.4rem;
+    max-width: 110rem;
+    margin: 0 auto;
 }
 
 .skills-box {
-    background:white;
-    color:var(--main-color);
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    padding: 3rem 2rem;
-    border-radius: 2rem;
+    background: #fff;
+    color: var(--main-color);
+    border: 1px solid #e6d8cd;
+    border-radius: 18px;
+    padding: 2.8rem 2rem;
+    min-height: 24rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     text-align: center;
-    border:1px solid #e5d7cb;
-    transition: .5s ease;
+
+    box-shadow: 0 5px 18px rgba(59, 40, 33, 0.05);
+    transition: transform .3s ease, box-shadow .3s ease;
 }
 
 .skills-box:hover {
-    border-color: var(--main-color);
-    transform: scale(1.02);
-    box-shadow: 0 0 1.5rem rgba(255, 154, 158, 0.1);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(59, 40, 33, 0.12);
+    border-color: var(--accent-color);
 }
 
-.skills-box i {
-    font-size: 5rem;
-    color:var(--accent-color);
-    margin-bottom: 1.5rem;
+/* Area logo */
+.logo-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    min-height: 7rem;
+    margin-bottom: 2rem;
 }
 
+/* Ukuran semua logo diseragamkan */
+.logo-group img {
+    width: 6rem;
+    height: 6rem;
+    padding: .8rem;
+    object-fit: contain;
+
+    background: #f5eee7;
+    border: 1px solid #eee2d8;
+    border-radius: 14px;
+
+    transition: transform .3s ease;
+}
+
+.logo-group img:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* Judul skill */
 .skills-box h3 {
-    font-size: 2rem;
+    color: var(--main-color);
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.5;
     margin-bottom: 1rem;
 }
 
+/* Keterangan skill */
 .skills-box p {
-    font-size: 1.4rem;
-    color:var(--text-light);
-    line-height: 1.6;
+    color: var(--text-light);
+    font-size: 1.3rem;
+    line-height: 1.8;
+    margin: 0;
 }
 
+/* Tablet */
+@media (max-width: 900px) {
+    .skills-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.8rem;
+    }
+}
+
+/* HP */
+@media (max-width: 520px) {
+    .skills {
+        padding: 10rem 5% 5rem;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-box {
+        min-height: auto;
+        padding: 2.5rem 1.8rem;
+    }
+}
 /* =================  PROJECT ================= */
 
 .project{
@@ -1091,11 +1155,11 @@ header {
 /* IMAGE POPUP */
 
 .certificate-popup img{
-    width:70%;
+    width:100%;
 
-    max-width:500px;
+    max-width:400px;
 
-    border-radius:20px;
+    border-radius:30px;
 
     border:4px solid white;
 
@@ -1356,23 +1420,28 @@ header {
 }
 
 
+/* ==================== AGE DISPLAY ==================== */
 .age-simple {
     display: flex;
     align-items: baseline;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 4px;
+    margin-top: 12px;
 }
 
 .age-number {
     font-size: 3.5rem;
     font-weight: 800;
-    color: #3b2821; /* Mengikuti warna utama Anda */
+    color: #3b2821;
+}
+
+.age-plus {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3b2821;
 }
 
 .age-label {
-    font-size: 1.8rem;
-    color: #8b6b61; /* Mengikuti warna aksen Anda */
-    font-weight: 500;
+    font-size: 1.5rem;
+    color: #8b6b61;
+    margin-left: 5px;
 }
-
-
